@@ -1,0 +1,13 @@
+
+<div class="container">
+<h1>Test view articles</h1>
+
+<ul>
+<% @articles.each do |article| %>
+<%= link_to article_path(article.id) do %>
+<li><%=article.title%>, <%= article.content%> </li>
+<% end %>
+<% end %>
+</ul>
+<%= link_to "Add an article", articles_new_path, class: 'btn btn-primary'%>
+</div>
